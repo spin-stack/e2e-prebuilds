@@ -1,0 +1,10 @@
+# Never run: the repository's Actions are off. It is here for what it says, a remote whose
+# password is a reference to a secret, which a prebuild's credential scan must not refuse.
+name: forks
+on: workflow_dispatch
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git remote add fork https://x-access-token:${FORKS_TOKEN}@github.com/spin-stack/e2e-prebuilds.git
+      - run: git remote set-url fork https://x-access-token:${{ secrets.FORKS_TOKEN }}@github.com/spin-stack/e2e-prebuilds.git
