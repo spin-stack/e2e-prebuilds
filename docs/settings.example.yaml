@@ -1,0 +1,3 @@
+# Not a real credential: a password in a URL the repository commits. Every member who opens the
+# project clones it anyway, so a prebuild's credential scan does not refuse it (spin#1236).
+database: postgres://e2e:not-a-secret@db.example.invalid/app
