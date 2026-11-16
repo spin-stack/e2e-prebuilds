@@ -2,6 +2,5 @@ version: "1"
 tasks:
   create:
     cmds:
-      - echo "e2e-prebuilds create ran"
-      # The commit create ran at, which the lane compares with the prebuild's.
-      - git rev-parse HEAD > .spin-create-commit
+      - echo "e2e-prebuilds create fails on purpose" >&2
+      - exit 1
