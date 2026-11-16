@@ -2,6 +2,6 @@ version: "1"
 tasks:
   create:
     cmds:
-      - echo "e2e-prebuilds create ran"
-      # The commit create ran at, which the lane compares with the prebuild's.
-      - git rev-parse HEAD > .spin-create-commit
+      # Not a real credential: a password in a URL the build writes, which the scan refuses.
+      - mkdir -p deploy
+      - echo "database: postgres://e2e:not-a-secret@db.example.invalid/app" > deploy/settings.yaml
