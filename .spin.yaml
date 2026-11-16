@@ -1,7 +1,5 @@
-version: "1"
+version: "2"
 tasks:
   create:
     cmds:
-      - echo "e2e-prebuilds create ran"
-      # The commit create ran at, which the lane compares with the prebuild's.
-      - git rev-parse HEAD > .spin-create-commit
+      - echo "never runs: the version is not one the guest reads"
