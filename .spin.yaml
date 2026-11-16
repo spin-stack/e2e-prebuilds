@@ -4,4 +4,4 @@ tasks:
     cmds:
       # Not a real credential: a password in a URL the build writes, which the scan refuses.
       - mkdir -p deploy
-      - echo "database: postgres://e2e:not-a-secret@db.example.invalid/app" > deploy/settings.yaml
+      - 'echo "database: postgres://e2e:not-a-secret@db.example.invalid/app" > deploy/settings.yaml'
